@@ -17,10 +17,10 @@ const RecordCard = ({ data }) => {
 
   return (
     <Card style={cardStyle}>
-      <View style={textContainerStyle}>
+      <View style={[textContainerStyle, {flex: 3}]}>
         <Text style={textStyle}>{data.rollNo}</Text>
       </View>
-      <View style={[dividerStyle, textContainerStyle]}>
+      <View style={[dividerStyle, textContainerStyle, {flex: 4}]}>
         <Text style={textStyle}>{data.name}</Text>
       </View>
       <View style={[dividerStyle, textContainerStyle]}>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   textContainer:{
-    flex: 1,
+    flex: 2,
     paddingHorizontal: 4,
     paddingVertical: 4,
   },
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.success,
   },
   textContainerCompleted:{
-    flex: 1,
+    flex: 2,
     paddingHorizontal: 4,
     paddingVertical: 4,
   },

@@ -4,13 +4,12 @@ import RecordCard from "./RecordCard";
 const RegisterList = () => {
   const data = [
     {
-      rollNo: "123",
+      rollNo: "21cs01089",
       name: "hello",
       outTime: "12:20",
       inTime: "14:00",
-      completed: true,
     },
-    { rollNo: "153", name: "heo", outTime: "12:10" },
+    { rollNo: "153", name: "hhf", outTime: "12:10" },
     { rollNo: "53", name: "heo", outTime: "12:10" },
     { rollNo: "o153", name: "heo", outTime: "12:10" },
     { rollNo: "1253", name: "heo", outTime: "12:10" },
@@ -28,10 +27,10 @@ const RegisterList = () => {
       }}
     >
       <View style={styles.registerHeader}>
-        <Text style={styles.registerHeaderText}>Roll No</Text>
-        <Text style={styles.registerHeaderText}>Name</Text>
-        <Text style={styles.registerHeaderText}>Out Time</Text>
-        <Text style={styles.registerHeaderText}>In Time</Text>
+        <Text style={[styles.registerHeaderText, {flex: 2.8}]}>Roll No:</Text>
+        <Text style={[styles.registerHeaderText, , {flex: 3.8}]}>Name:</Text>
+        <Text style={styles.registerHeaderText}>Out Time:</Text>
+        <Text style={styles.registerHeaderText}>In Time:</Text>
       </View>
       <FlatList
         data={data}
@@ -45,11 +44,13 @@ const RegisterList = () => {
 const styles = StyleSheet.create({
   registerHeader: {
     flexDirection: "row",
-    paddingHorizontal: 16,
-    marginBottom: 4
+    paddingHorizontal: 24,
+    marginBottom: 4,
   },
   registerHeaderText: {
-    flex: 1,
+    flex: 2,
+    fontSize: 12,
+    marginHorizontal: 2,
   },
 });
 

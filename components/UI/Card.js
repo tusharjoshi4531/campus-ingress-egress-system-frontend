@@ -8,7 +8,7 @@ const Card = ({ children, style }) => {
 const styles = StyleSheet.create({
   cardContainer: {
     backgroundColor: Colors.base,
-    borderRadius: 16,
+    borderRadius: 8,
     padding: 20,
     margin: 8,
   },

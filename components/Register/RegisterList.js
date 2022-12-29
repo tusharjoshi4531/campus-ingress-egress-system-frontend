@@ -16,7 +16,9 @@ const RegisterList = () => {
   ];
 
   return (
-    <View>
+    <View style={{
+      height: "80%"
+    }}>
       <FlatList
         data={data}
         renderItem={({ item }) => <RecordCard data={item} />}

@@ -1,19 +1,17 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import TodaysRegisterCard from "../components/TodaysRegisterCard";
-import IncompleteTripsCard from "../components/IncompleteTripsCard";
-import CameraButton from "../components/CameraButton";
+import { StyleSheet, Text, View } from "react-native";
+import RegisterCard from "../components/Options/RegisterCard";
+import PrimaryButton from "../components/UI/buttons/PrimaryButton";
 
-function OptionsScreen(props) {
+function OptionsScreen() {
   return (
     <View style={styles.container}>
-      <TodaysRegisterCard
-        style={styles.todaysRegisterCard}
-      ></TodaysRegisterCard>
-      <IncompleteTripsCard
-        style={styles.incompleteTripsCard}
-      ></IncompleteTripsCard>
-      <CameraButton style={styles.cameraButton}></CameraButton>
+      <RegisterCard title="Today's Register">
+        <Text>Hello</Text>
+      </RegisterCard>
+      <RegisterCard title="Unfinished Trips">
+        <Text>Hello</Text>
+      </RegisterCard>
+      <PrimaryButton>Camera</PrimaryButton>
     </View>
   );
 }
@@ -21,24 +19,8 @@ function OptionsScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignContent: 'center'
+    padding: 16,
   },
-  todaysRegisterCard: {
-    height: 282,
-    width: 330,
-    marginTop: 55
-  },
-  incompleteTripsCard: {
-    height: 282,
-    width: 330,
-    marginTop: 16
-  },
-  cameraButton: {
-    height: 57,
-    width: 330,
-    backgroundColor: "#fff",
-    marginTop: 38
-  }
 });
 
 export default OptionsScreen;

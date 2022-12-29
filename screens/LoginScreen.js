@@ -19,20 +19,27 @@ const LoginScreen = () => {
   };
 
   return (
-    <Card style={styles.loginFormContainer}>
-      <Text style={styles.title}>LOGIN</Text>
-      <PrimaryTextInput placeholder="Email" />
-      <PrimaryTextInput placeholder="Password" />
-      <PrimaryButton onPress={loginPressHandler}>Login</PrimaryButton>
-      <PrimaryButtonGroup
-        groupItems={buttonGroupItems}
-        onSelect={loginTypeSelectHandler}
-      />
-    </Card>
+    <View style={styles.screen}>
+      <Card style={styles.loginFormContainer}>
+        <Text style={styles.title}>LOGIN</Text>
+        <PrimaryTextInput placeholder="Email" />
+        <PrimaryTextInput placeholder="Password" />
+        <PrimaryButton onPress={loginPressHandler}>Login</PrimaryButton>
+        <PrimaryButtonGroup
+          groupItems={buttonGroupItems}
+          onSelect={loginTypeSelectHandler}
+        />
+      </Card>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   loginFormContainer: {
     width: "50%",
     maxWidth: 300,

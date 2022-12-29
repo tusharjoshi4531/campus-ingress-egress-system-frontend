@@ -8,7 +8,7 @@ const RecordCard = ({ data }) => {
   let textContainerStyle = styles.textContainer;
   let dividerStyle = styles.divider;
 
-  if (data.completed) {
+  if (data.inTime) {
     cardStyle = styles.cardCompleted;
     textStyle = styles.textDataCompleted;
     textContainerStyle = styles.textContainerCompleted;
@@ -18,13 +18,16 @@ const RecordCard = ({ data }) => {
   return (
     <Card style={cardStyle}>
       <View style={textContainerStyle}>
-        <Text style={textStyle}>{data.name}</Text>
-      </View>
-      <View style={[dividerStyle, textContainerStyle]}>
         <Text style={textStyle}>{data.rollNo}</Text>
       </View>
       <View style={[dividerStyle, textContainerStyle]}>
-        <Text style={textStyle}>{data.time}</Text>
+        <Text style={textStyle}>{data.name}</Text>
+      </View>
+      <View style={[dividerStyle, textContainerStyle]}>
+        <Text style={textStyle}>{data.outTime}</Text>
+      </View>
+      <View style={[dividerStyle, textContainerStyle]}>
+        <Text style={textStyle}>{data.inTime}</Text>
       </View>
     </Card>
   );
@@ -37,12 +40,12 @@ const styles = StyleSheet.create({
   },
   textContainer:{
     flex: 1,
-    paddingHorizontal: 8,
+    paddingHorizontal: 4,
     paddingVertical: 4,
   },
   textData: {
     color: "black",
-    fontSize: 18,
+    fontSize: 14,
   },
   divider: {
     borderLeftWidth: 1,
@@ -55,12 +58,12 @@ const styles = StyleSheet.create({
   },
   textContainerCompleted:{
     flex: 1,
-    paddingHorizontal: 8,
+    paddingHorizontal: 4,
     paddingVertical: 4,
   },
   textDataCompleted: {
     color: "white",
-    fontSize: 18,
+    fontSize: 14,
   },
   dividerCompleted: {
     borderLeftWidth: 1,

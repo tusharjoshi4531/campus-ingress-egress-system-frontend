@@ -22,20 +22,10 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   title: {
-    margin: 20,
+    margin: 0,
     fontSize: 42,
     textAlign: "center",
   },
-  filterButton: {
-    height: 53,
-    width: 318,
-    marginTop: 33
-  },
-  registerList: {
-    height: 552,
-    width: 318,
-    marginTop: 26
-  }
 });
 
 export default RegisterScreen;

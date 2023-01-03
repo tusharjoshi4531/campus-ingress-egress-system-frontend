@@ -35,7 +35,7 @@ const RecordCard = ({ data }) => {
 
 const styles = StyleSheet.create({
   card: {
-    marginHorizontal: 0,
+    marginHorizontal: 10,
     flexDirection: "row",
   },
   textContainer:{
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
   },
   cardCompleted: {
-    marginHorizontal: 0,
+    marginHorizontal: 10,
     flexDirection: "row",
     backgroundColor: Colors.success,
   },

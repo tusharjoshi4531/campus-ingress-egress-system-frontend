@@ -2,13 +2,18 @@ import { StyleSheet, Text, View } from "react-native";
 import RegisterCard from "../components/Options/RegisterCard";
 import PrimaryButton from "../components/UI/buttons/PrimaryButton";
 
-function OptionsScreen() {
+function OptionsScreen({ navigation }) {
+
+  const registerCardPressHandler = () => {
+    navigation.navigate("Register");
+  }
+
   return (
     <View style={styles.container}>
-      <RegisterCard title="Today's Register">
+      <RegisterCard title="Today's Register" onPress={registerCardPressHandler}>
         <Text>Hello</Text>
       </RegisterCard>
-      <RegisterCard title="Unfinished Trips">
+      <RegisterCard title="Unfinished Trips" onPress={registerCardPressHandler}>
         <Text>Hello</Text>
       </RegisterCard>
       <PrimaryButton>Camera</PrimaryButton>

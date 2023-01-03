@@ -4,7 +4,7 @@ import PrimaryButton from "../components/UI/buttons/PrimaryButton";
 import PrimaryTextInput from "../components/UI/PrimaryTextInput";
 import PrimaryButtonGroup from "../components/UI/buttons/PrimaryButtonGroup";
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const buttonGroupItems = [
     { text: "Faculty", id: "fac" },
     { text: "Gaurd", id: "grd" },
@@ -12,6 +12,7 @@ const LoginScreen = () => {
 
   const loginPressHandler = () => {
     console.log("Login");
+    navigation.navigate("Options");
   };
 
   const loginTypeSelectHandler = (id) => {

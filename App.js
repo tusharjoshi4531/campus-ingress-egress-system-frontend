@@ -5,14 +5,25 @@ import PrimaryButton from "./components/UI/buttons/PrimaryButton";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterSceen";
 import OptionsScreen from "./screens/OptionsScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      {/* <LoginScreen /> */}
-      <RegisterScreen/>
-      {/* <OptionsScreen /> */}
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+          contentStyle: { backgroundColor: "#fff" },
+        }}
+      >
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Options" component={OptionsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

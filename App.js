@@ -5,6 +5,7 @@ import PrimaryButton from "./components/UI/buttons/PrimaryButton";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterSceen";
 import OptionsScreen from "./screens/OptionsScreen";
+import CameraScreen from "./screens/CameraScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Options" component={OptionsScreen} />
+        <Stack.Screen name="Camera" component={CameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

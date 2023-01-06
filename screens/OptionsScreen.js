@@ -8,6 +8,10 @@ function OptionsScreen({ navigation }) {
     navigation.navigate("Register");
   }
 
+  const cameraPressHandler = () => {
+    navigation.navigate('Camera');
+  }
+
   return (
     <View style={styles.container}>
       <RegisterCard title="Today's Register" onPress={registerCardPressHandler}>
@@ -16,7 +20,7 @@ function OptionsScreen({ navigation }) {
       <RegisterCard title="Unfinished Trips" onPress={registerCardPressHandler}>
         <Text>Hello</Text>
       </RegisterCard>
-      <PrimaryButton>Camera</PrimaryButton>
+      <PrimaryButton onPress={cameraPressHandler}>Camera</PrimaryButton>
     </View>
   );
 }
